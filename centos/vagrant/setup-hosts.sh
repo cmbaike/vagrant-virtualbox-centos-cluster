@@ -10,9 +10,5 @@ sed -e "s/^.*${HOSTNAME}.*/${ADDRESS} ${HOSTNAME} ${HOSTNAME}.local/" -i /etc/ho
 
 sed -e "/^.*$2.*/d" -i /etc/hosts
 
-# Update /etc/hosts about other hosts
- 
-EOF
-
 # Expoert internal IP as an environment variable
 echo "INTERNAL_IP=${ADDRESS}" >> /etc/environment
